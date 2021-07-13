@@ -1,0 +1,90 @@
+import random
+
+playe = input("Numele jucatorului: ")
+def play_game():
+    playe2 = str("Robotul")
+    jucator3 = (random.choice(list)).capitalize()
+    jucator1 = input("Jucatorul " + str(playe) + " ce va alege? ").capitalize()
+    print("Robotul a ales " + jucator3)
+    if jucator1 == jucator3:
+        print("Egal!")
+    elif jucator1 == "Piatra":
+        if jucator3 == "Foarfeca":
+            print("Castiga " + playe + " pentru ca a spart " + jucator3 + "!")
+        elif jucator3 == "Hartia":
+            print("Castiga " + playe2 + " pentru ca a invelit " + jucator1 + "!")
+        else:
+            print('Nu ai scris bine!')
+    elif jucator1 == "Foarfeca":
+        if jucator3 == "Piatra":
+            print("Castiga " + playe2 + " pentru ca a spart " + jucator1 + "!")
+        elif jucator3 == "Hartia":
+            print("Castiga " + playe + " pentru ca a taiat " + jucator3 + "!")
+        else:
+            print("Nu ai scris bine!")
+    elif jucator1 == "Hartia":
+        if jucator3 == "Piatra":
+            print("Castiga " + playe + " pentru ca a invelit " + jucator3 + "!")
+        elif jucator3 == "Foarfeca":
+            print("Castiga " + playe2 + " pentru ca a taiat " + jucator1 + "!")
+        else:
+            print("Nu ai scris bine!")
+    else:
+        print("Nu ai scris bine!")
+
+
+list = ["Piatra", "Foarfeca", "Hartia"]
+print("Bine ati venit, acesta este jocul piatra, foarfeca, hartie")
+def start_game():
+    game = input("Vrei sa jucati impotriva unui robot sau impotriva unui coleg?(coleg/robot)")
+    if game == "robot":
+        play_game()
+    elif game == "coleg":
+        play_game2()
+
+
+
+def play_game2():
+    player2 = input("Numele jucatorului numarul 2: ")
+    jucator = input("Jucatorul " + str(playe) + " ce va alege? ").capitalize()
+    jucator2 = input("Jucatorul " + str(player2) + " ce va alege? ").capitalize()
+    if jucator == jucator2:
+        print("Egal!")
+    elif jucator == "Piatra":
+        if jucator2 == "Foarfeca":
+            print("Castiga " + playe + " pentru ca a spart " + jucator2 + "!")
+        elif jucator2 == "Hartia":
+            print("Castiga " + player2 + " pentru ca a invelit " + jucator + "!")
+        else: print('Nu ai scris bine!')
+    elif jucator == "Foarfeca":
+        if jucator2 == "Piatra":
+            print("Castiga " + player2 + " pentru ca a spart " + jucator + "!")
+        elif jucator2 == "Hartia":
+            print("Castiga " + playe + " pentru ca a taiat " + jucator2 + "!")
+        else: print("Nu ai scris bine!")
+    elif jucator == "Hartia":
+        if jucator2 == "Piatra":
+            print("Castiga " + playe + " pentru ca a invelit " + jucator2 + "!")
+        elif jucator2 == "Foarfeca":
+            print("Castiga " + player2 + " pentru ca a taiat " + jucator + "!")
+        else: print("Nu ai scris bine!")
+    else:
+        print("Nu ai scris bine!")
+
+
+
+
+def main():
+
+
+    while True:
+        start_game()
+
+        play_again = input('Mai jucati? : ') == 'da'
+        if not play_again:
+            return
+
+
+
+main()
+
